@@ -12,6 +12,7 @@ const enquirySchema = new mongoose.Schema({
     required: [true, 'Email is required'],
     trim: true,
     lowercase: true,
+    unique: true
   },
   phone: {
     type: String,
@@ -32,5 +33,5 @@ const enquirySchema = new mongoose.Schema({
   timestamps: true
 })
 
-export const Enquiry = mongoose.model('Enquiry', enquirySchema)
+export const EnquiryModal = mongoose.model('Enquiry', enquirySchema)
 
