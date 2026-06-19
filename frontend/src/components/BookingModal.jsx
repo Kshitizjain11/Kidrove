@@ -68,14 +68,7 @@ export default function BookingModal({ onClose, showToast }) {
                     <option value="14">14 Years</option>
                   </select>
                 </div>
-                <div className="form-group">
-                  <label className="form-label">Preferred Batch *</label>
-                  <select name="batch" required className="form-input bg-white">
-                    <option value="">Select batch</option>
-                    <option value="weekday">Weekday (Mon-Fri, 10AM-12PM)</option>
-                    <option value="weekend">Weekend (Sat-Sun, 2PM-5PM)</option>
-                  </select>
-                </div>
+
 
                 <div className="flex items-center justify-between py-4 border-t border-gray-100 mb-4">
                   <span className="font-bold text-gray-900">Total Amount</span>

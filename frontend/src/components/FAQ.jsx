@@ -8,7 +8,7 @@ export default function FAQ() {
     { q: 'How are the online classes conducted?', a: 'Classes are held live via Zoom with small batch sizes (max 12 students) to ensure personalized attention. Each session includes interactive demos, hands-on building time, and Q&A. Recordings are available for missed classes.' },
     { q: 'Is there a refund policy?', a: 'Yes! We offer a full refund if you cancel within 7 days of the start date. After the workshop begins, we offer prorated refunds based on attendance. Your satisfaction and your child`;s learning experience are our top priorities.' },
     { q: 'Will my child receive a certificate?', a: 'Absolutely! Every child who completes the workshop receives a verified digital certificate of completion. Outstanding projects may also receive a "Young Innovator" badge.' },
-    { q: 'What is the class schedule?', a: 'Classes run Monday to Friday, 10:00 AM – 12:00 PM IST. Weekend batches are also available (Saturday & Sunday, 2:00 PM – 5:00 PM). You can choose your preferred batch during registration.' },
+    { q: 'What is the class schedule?', a: 'Classes run Monday to Friday, 10:00 AM – 12:00 PM IST.' },
   ]
 
   return (
