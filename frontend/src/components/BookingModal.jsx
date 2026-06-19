@@ -1,17 +1,33 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 export default function BookingModal({ onClose, showToast }) {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    setTimeout(() => {
+
+    const formData = new FormData(e.target)
+
+    try {
+      const res = await axios.post('http://localhost:3000/enquiry', {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        childAge: Number(formData.get('age')),
+        workshopName: 'AI & Robotics Summer Workshop',
+      })
+
       setSubmitted(true)
+      showToast(res.data.message)
+    } catch (err) {
+      const msg = err.response?.data?.message || 'Something went wrong. Please try again.'
+      showToast(msg)
+    } finally {
       setLoading(false)
-      showToast('Enrollment successful! Check your email.')
-    }, 1500)
+    }
   }
 
   const handleClose = () => {
