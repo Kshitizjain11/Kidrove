@@ -12,7 +12,7 @@ export default function BookingModal({ onClose, showToast }) {
     const formData = new FormData(e.target)
 
     try {
-      const res = await axios.post('http://localhost:3000/enquiry', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/enquiry`, {
         name: formData.get('name'),
         email: formData.get('email'),
         phone: formData.get('phone'),
