@@ -8,8 +8,6 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 3000
 
-DatabaseConnect()
-
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -19,6 +17,9 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/enquiry",registrationRoute)
+
+// Connect to DB first, then start listening
+await DatabaseConnect()
 
 app.listen(PORT,()=>{
     console.log(`Server running successfully at PORT : ${PORT}`)
