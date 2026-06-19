@@ -103,7 +103,7 @@ export default function WorkshopDetails() {
                 <i className="far fa-calendar text-gray-400"></i>
                 <span className="font-semibold text-gray-900">15 Jul – 12 Aug, 2026</span>
               </div>
-              <p className="text-sm text-gray-500 ml-7">Classes run Monday–Friday, 10:00 AM – 12:00 PM IST. Weekend batch also available.</p>
+              <p className="text-sm text-gray-500 ml-7">Classes run Monday–Friday, 10:00 AM – 12:00 PM IST.</p>
             </div>
 
             <div className="mb-6">
